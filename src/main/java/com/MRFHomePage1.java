@@ -9,6 +9,8 @@ import driverFactory.DriverFactory;
 
 public class MRFHomePage {
 	WebDriver driver = DriverFactory.getDriver();
+
+    system.out.println("This is a test");
     
 
 @FindBy(xpath="//p[text()='passenger cars']") WebElement PassengerCarsButton; 
