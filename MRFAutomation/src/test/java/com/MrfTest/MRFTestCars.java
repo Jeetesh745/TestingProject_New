@@ -43,6 +43,18 @@ public class MRFTestCars extends BaseClass {
 //    	 
 //    }
     
+    @Test (priority=2)
+    public void verifyCarWebPage() throws InterruptedException {
+
+        homePage.clickOnPassengerCars();
+
+        String actualText = carPage.webPageText();
+
+        String expText = AppConstants.Manufacturer_Recommended_Tyre_Text;
+        		
+        Assert.assertEquals(actualText, expText);
+    }
+    
 
     
     
