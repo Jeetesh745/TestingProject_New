@@ -23,7 +23,7 @@ public class ArchanaTest extends BaseClass {
         Assert.assertEquals(actualText, expText);
     }
     
-    @Test (priority=2,  dataProvider = "carTestData", dataProviderClass = carTyreDataProvider.class)
+    @Test (priority=2,  dataProvider = "carTestData1", dataProviderClass = carTyreDataProvider.class)
     public void selectCarTyre(String make, String model, String expectedName) throws InterruptedException {
    	 homePage.clickOnPassengerCars();
   	 carPage.selectCarTyre(make,model);
