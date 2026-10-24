@@ -25,14 +25,16 @@ public class MRFTestTwoWheelers extends BaseClass {
 		homePage.clickOnTwoWheelers();
 		String text = twoWheelers.frontTyreText();
 		boolean result = text.equalsIgnoreCase("Front");
-		Assert.assertTrue(result, " Tc failed twoWheeler front web element");
+		Assert.assertTrue(result, " Tc failed fourWheeler front web element");
 	}
-	@Test(priority=2,  dataProvider = "twoWheelerTestData", dataProviderClass = twoWheelerTyreDataProvider.class)
+	@Test(priority=2,  dataProvider = "fourWheelerTestData", dataProviderClass = twoWheelerTyreDataProvider.class)
 	public void selectTyre2Wheeler(String make, String model, String validationName) throws InterruptedException {
 		twoWheelers.selectTyre(make, model);
 		Thread.sleep(2000);
 		Assert.assertEquals(twoWheelers.VerifyMakeAndModel(), validationName,"TC failed vehicle name did not match");
 		twoWheelers.clickBackButton();
+		
+		
 	}
 
 	
