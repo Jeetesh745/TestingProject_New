@@ -29,4 +29,11 @@ public void clickOnTwoWheelers() {
 	TwoWheelersButton.click();
 }
 
+@Test(priority = 2)
+public void verifyCarPageTitle() {
+    String actualTitle = driver.getTitle();
+    String expTitle = "Mercedes-Benz165";
+    Assert.assertEquals(actualTitle, expTitle);
+}
+
 }
