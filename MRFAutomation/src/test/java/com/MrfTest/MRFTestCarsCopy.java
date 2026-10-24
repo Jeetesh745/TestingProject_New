@@ -22,6 +22,13 @@ public class MRFTestCars extends BaseClass {
         Assert.assertEquals(actualText, expText);
     }
     
+    @Test(priority = 2)
+    public void verifyCarPageTitle() {
+        String actualTitle = driver.getTitle();
+        String expTitle = "Mercedes-Benz165";
+        Assert.assertEquals(actualTitle, expTitle);
+    }
+    
 //    @Test (priority=2,  dataProvider = "carTestData", dataProviderClass = carTyreDataProvider.class)
 //    public void selectCarTyre(String make, String model, String expectedName) throws InterruptedException {
 //    	 homePage.clickOnPassengerCars();

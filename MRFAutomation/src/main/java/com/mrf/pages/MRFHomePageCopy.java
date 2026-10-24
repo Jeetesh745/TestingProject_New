@@ -7,13 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 //import com.mrftyres.base.BaseClass.*;
 import driverFactory.DriverFactory;
 
-public class MRFHomePageCopy  {
+public class MRFHomePageCopy {
 	WebDriver driver = DriverFactory.getDriver();
 
-
-@FindBy(xpath="//p[text()='passenger cars']") WebElement PassengerCarsButton; 
-@FindBy(xpath="(//p[text()='Two Wheelers'])[1]") WebElement TwoWheelersButton;
-
+	@FindBy(xpath = "//p[text()='passenger cars']")
+	WebElement PassengerCarsButton;
+	@FindBy(xpath = "(//p[text()='Two Wheelers'])[1]")
+	WebElement TwoWheelersButton;
 
 public MRFHomePage(WebDriver driver){
 	this.driver=driver;
@@ -21,12 +21,21 @@ public MRFHomePage(WebDriver driver){
 	PageFactory.initElements(driver, this);
 }
 
-public void clickOnPassengerCars() {
-	 PassengerCarsButton.click();
-}
+	public void clickOnPassengerCars() {
+		PassengerCarsButton.click();
+	}
 
-public void clickOnTwoWheelers() {
-	TwoWheelersButton.click();
-}
+	public void clickOnPassengerCars1() {
+		PassengerCarsButton.click();
+	}
+
+	public void clickOnTwoWheelers1() {
+		TwoWheelersButton.click();
+	}
+
+	public void clickOnStashing() {
+		OnStashingButton.click();
+
+	}
 
 }
