@@ -26,8 +26,11 @@ public class MRFTestCars extends BaseClass {
     @Test(priority = 2)
     public void verifyCarPageTitle() {
         String actualTitle = driver.getTitle();
-        String expTitle = "Mercedes-Benz123";
+        String expTitle = "Mercedes-Benz123456";
+        System.out.println("--- Java Primitive Data Types ---");
+        
         Assert.assertEquals(actualTitle, expTitle);
+        
         
         
     }
