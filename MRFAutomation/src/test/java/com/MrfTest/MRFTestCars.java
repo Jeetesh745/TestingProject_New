@@ -26,8 +26,13 @@ public class MRFTestCars extends BaseClass {
     @Test(priority = 2)
     public void verifyCarPageTitle() {
         String actualTitle = driver.getTitle();
-        String expTitle = "Mercedes-Benz";
+        String expTitle = "Mercedes-Benz123456";
+        System.out.println("--- Java Primitive Data Types ---");
+        
         Assert.assertEquals(actualTitle, expTitle);
+        
+        
+        
     }
     
 //    @Test (priority=2,  dataProvider = "carTestData", dataProviderClass = carTyreDataProvider.class)
@@ -37,6 +42,18 @@ public class MRFTestCars extends BaseClass {
 //    	 Assert.assertEquals(carPage.carMakeAndModelName(), expectedName,"TC failed failed to verify car name on booking page");
 //    	 
 //    }
+    
+    @Test (priority=2)
+    public void verifyCarWebPage() throws InterruptedException {
+
+        homePage.clickOnPassengerCars();
+
+        String actualText = carPage.webPageText();
+
+        String expText = AppConstants.Manufacturer_Recommended_Tyre_Text;
+        		
+        Assert.assertEquals(actualText, expText);
+    }
     
 
     
